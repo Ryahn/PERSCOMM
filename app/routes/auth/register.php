@@ -14,7 +14,7 @@ $app->post('/register', function() use ($app) {
     
     $v = $app->validation;
     $v->validate([
-        'email' => [$email, 'required|email'],
+        'email' => [$email, 'required|email|uniqueEmail'],
         'username' => [$username, 'required|alnumDash'],
         'username' => [$username, 'required|alnumDash|max(20)'],
         'password' => [$password, 'required|min(6)'],
