@@ -6,7 +6,7 @@
 <form action="{{ urlFor('login.post') }}" method="post" autocomplete="off">
     <div>
         <label for="identifier">Username/email</label>
-        <input type="text" name="indentifier" id="identifier">
+        <input type="text" name="identifier" id="identifier">
         {% if errors.first('identifier') %} {{ errors.first('identifier') }} {% endif %}
     </div>
     <div>

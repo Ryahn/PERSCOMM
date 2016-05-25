@@ -7,6 +7,7 @@ use Noodlehaus\Config;
 use PERSCOMM\User\User;
 use PERSCOMM\Helpers\Hash;
 use PERSCOMM\Validation\Validator;
+use PERSCOMM\Middleware\BeforeMiddleware;
 
 session_cache_limiter(false);
 session_start();
@@ -27,8 +28,12 @@ $app->configureMode($app->config('mode'), function() use ($app) {
     $app->config = Config::load(INC_ROOT . "/app/config/{$app->mode}.php");
 });
 
+$app->add(new BeforeMiddleware);
+
 require 'database.php';
 require 'routes.php';
+
+$app->auth = false;
 
 $app->container->set('user', function() {
     return new User;
