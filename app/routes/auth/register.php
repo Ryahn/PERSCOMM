@@ -26,6 +26,11 @@ $app->post('/register', function() use ($app) {
         'username' => $username,
         'password' => $app->hash->password($password)
     ]);
+        
+//        $app->mail->send('email/auth/registered.php', ['user' => $user], function($message) {
+//            $message->to($user->email);
+//            $message->subject('Thanks for registering.');
+//        })
     
     $app->flash('global', 'You have been registered.');
     $app->response->redirect($app->urlFor('home'));

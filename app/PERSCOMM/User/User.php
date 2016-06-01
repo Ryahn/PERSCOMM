@@ -25,4 +25,8 @@ class User extends Eloquent {
 
 		return "{$this->first_name} {$this->last_name}";
 	}
+    
+    public function getFullNameOrUsername() {
+        return $this->getFullName() ?: $this->username;
+    }
 }
