@@ -12,7 +12,7 @@ return [
         'host' => 'localhost',
         'name' => 'vas',
         'username' => 'root',
-        'password' => '',
+        'password' => 'cybernations',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix' => ''
@@ -23,10 +23,10 @@ return [
     ],
     'mail' => [
         'smtp_auth' => true,
-        'smtp_secure' => '',
-        'host' => '',
-        'username' => '',
-        'password' => '',
+        'smtp_secure' => 'tls',
+        'host' => 'smtp.gmail.com',
+        'username' => 'ryantestapp2016@gmail.com',
+        'password' => 'cyber!!1112341234',
         'port' => 587,
         'html' => true
     ],
