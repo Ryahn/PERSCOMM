@@ -1,7 +1,7 @@
 <?php
 return [
     'app' => [
-        'url' => 'viking.dev',
+        'url' => 'http://viking.dev',
         'hash' => [
             'algo' => PASSWORD_BCRYPT,
             'cost' => 10

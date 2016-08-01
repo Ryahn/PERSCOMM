@@ -9,6 +9,7 @@ use PERSCOMM\Helpers\Hash;
 use PERSCOMM\Validation\Validator;
 use PERSCOMM\Middleware\BeforeMiddleware;
 use PERSCOMM\Mail\Mailer;
+use RandomLib\Factory as RandomLib;
 
 session_cache_limiter(false);
 session_start();
@@ -61,6 +62,11 @@ $app->container->singleton('mail', function() use ($app) {
     $mailer->isHTML($app->config->get('mail.html'));
     
     return new Mailer($app->view, $mailer);
+});
+
+$app->container->singleton('randomlib', function() {
+    $factory = new RandomLib;
+    return $factory->getMediumStrengthGenerator();
 });
 
 $view = $app->view();
