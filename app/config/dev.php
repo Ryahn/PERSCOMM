@@ -1,7 +1,7 @@
 <?php
 return [
     'app' => [
-        'url' => '',
+        'url' => 'viking.dev',
         'hash' => [
             'algo' => PASSWORD_BCRYPT,
             'cost' => 10
@@ -10,13 +10,13 @@ return [
     'db' => [
         'driver' => 'mysql',
         'host' => 'localhost',
-        'name' => 'site',
+        'name' => 'vas',
         'username' => 'root',
-        'password' => 'root',
+        'password' => '',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix' => ''
-    ]
+    ],
     'auth' => [
         'session' => 'user_id',
         'remember' => 'user_r'

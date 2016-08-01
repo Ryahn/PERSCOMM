@@ -1,2 +1,5 @@
 development.php
 production.php
+dev.php
+pro.php
+db.php
