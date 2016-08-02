@@ -12,7 +12,10 @@ PERSCOMM (Personnel Command & Management) is a tool for military based communiti
 + LoA (Leave of Absence), TPR (Temporary Pass Request), and other absences management
 + Discharge Management
 + Recruitment Management
-+ AR15 (Article 15) Management  
++ AR15 (Article 15) Management
++ Attendence Management
++ Teamspeak plugin (soon)
++ Transparency reports - Charts and spreadsheets
 + Much more to come
 
 ## Contact

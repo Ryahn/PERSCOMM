@@ -33,6 +33,7 @@ $app->configureMode($app->config('mode'), function() use ($app) {
 $app->add(new BeforeMiddleware);
 
 require 'database.php';
+require 'filters.php';
 require 'routes.php';
 
 $app->auth = false;
