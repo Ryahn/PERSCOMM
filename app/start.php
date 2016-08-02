@@ -8,6 +8,7 @@ use PERSCOMM\User\User;
 use PERSCOMM\Helpers\Hash;
 use PERSCOMM\Validation\Validator;
 use PERSCOMM\Middleware\BeforeMiddleware;
+use PERSCOMM\Middleware\CsrfMiddleware;
 use PERSCOMM\Mail\Mailer;
 use RandomLib\Factory as RandomLib;
 
@@ -31,6 +32,7 @@ $app->configureMode($app->config('mode'), function() use ($app) {
 });
 
 $app->add(new BeforeMiddleware);
+$app->add(new CsrfMiddleware);
 
 require 'database.php';
 require 'filters.php';
