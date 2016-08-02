@@ -5,7 +5,7 @@
 <li><a href="{{ urlFor('home') }}">Home</a></li>
     
     {% if auth %}
-    Logged in
+   <li><a href="{{ urlFor('logout') }}">Log Out</a></li>
     {% else %}
 <li><a href="{{ urlFor('register') }}">Register</a></li>
 <li><a href="{{ urlFor('login') }}">Login</a></li>
